@@ -1,43 +1,6 @@
 import { ProductCard } from "./ProductCard";
 
-// Sample product data
-const products = [
-  {
-    id: "1",
-    name: "Premium Wireless Headphones",
-    price: 199.99,
-    originalPrice: 249.99,
-    rating: 4.8,
-    reviewCount: 1247,
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=800&fit=crop",
-    inStock: true,
-    featured: true,
-  },
-  {
-    id: "2",
-    name: "Smart Watch Pro",
-    price: 299.99,
-    originalPrice: 399.99,
-    rating: 4.6,
-    reviewCount: 892,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=800&fit=crop",
-    inStock: true,
-  },
-  {
-    id: "3",
-    name: "Gaming Laptop Elite",
-    price: 1299.99,
-    originalPrice: 1599.99,
-    rating: 4.9,
-    reviewCount: 456,
-    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=800&fit=crop",
-    inStock: true,
-    featured: true,
-  },
-  {
-    id: "4",
-    name: "Wireless Smartphone",
-    price: 699.99,
+import { products } from "@/lib/products";
     rating: 4.7,
     reviewCount: 2103,
     image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&h=800&fit=crop",
@@ -81,7 +44,7 @@ export function ProductGrid({ onAddToCart, onToggleFavorite }: ProductGridProps)
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product) => (
+            {products.map((product) => (
             <ProductCard
               key={product.id}
               product={product}
