@@ -16,7 +16,7 @@ Commerce Vista Spark is a modern e-commerce front-end built with React, Vite, Ty
 Clone the repository and install dependencies:
 
 ```sh
-git clone <YOUR_GIT_URL>
+git clone https://github.com/kiganyamburu/commerce-vista-spark.git
 cd commerce-vista-spark
 npm install
 npm run dev
