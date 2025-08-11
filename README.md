@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
+# Commerce Vista Spark
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/67458e8c-0be4-438b-b7c1-4d6c79f1c553
+Commerce Vista Spark is a modern e-commerce front-end built with React, Vite, TypeScript, Tailwind CSS, and shadcn-ui. It features a responsive product grid, shopping cart, and category browsing experience.
 
-## How can I edit this code?
+## Getting Started
 
-There are several ways of editing your application.
+### Prerequisites
 
-**Use Lovable**
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/67458e8c-0be4-438b-b7c1-4d6c79f1c553) and start prompting.
+### Local Development
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Clone the repository and install dependencies:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+cd commerce-vista-spark
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:5173` by default.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+- `src/components/` - Reusable UI and app components
+- `src/pages/` - Main pages (Categories, Product, etc.)
+- `src/lib/` - Utility and data files
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Tech Stack
 
-## What technologies are used for this project?
+- [Vite](https://vitejs.dev/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
 
-This project is built with:
+## Usage
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Browse products by category
+- View product details
+- Add/remove items from the shopping cart
 
-## How can I deploy this project?
+## Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/67458e8c-0be4-438b-b7c1-4d6c79f1c553) and click on Share -> Publish.
+You can deploy this project to any static hosting provider (e.g., Vercel, Netlify, GitHub Pages) after building:
 
-## Can I connect a custom domain to my Lovable project?
+```sh
+npm run build
+# Deploy the contents of the dist/ folder
+```
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Feel free to contribute or customize for your own e-commerce needs!
