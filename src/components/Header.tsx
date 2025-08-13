@@ -84,8 +84,10 @@ export function Header({
               )}
             </Button>
 
-            <Button variant="ghost" size="icon" onClick={onProfileClick}>
-              <User className="h-5 w-5" />
+            <Button asChild variant="ghost" size="icon">
+              <Link to="/profile">
+                <User className="h-5 w-5" />
+              </Link>
             </Button>
           </div>
         </div>
