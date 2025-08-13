@@ -2,6 +2,7 @@ import { ShoppingCart, Search, User, Menu, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
   cartItemsCount?: number;
@@ -9,7 +10,11 @@ interface HeaderProps {
   onProfileClick?: () => void;
 }
 
-export function Header({ cartItemsCount = 0, onCartClick, onProfileClick }: HeaderProps) {
+export function Header({
+  cartItemsCount = 0,
+  onCartClick,
+  onProfileClick,
+}: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
@@ -21,7 +26,9 @@ export function Header({ cartItemsCount = 0, onCartClick, onProfileClick }: Head
             </Button>
             <div className="flex items-center space-x-2">
               <div className="h-8 w-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">E</span>
+                <span className="text-primary-foreground font-bold text-lg">
+                  E
+                </span>
               </div>
               <span className="font-bold text-xl">EliteShop</span>
             </div>
@@ -29,11 +36,21 @@ export function Header({ cartItemsCount = 0, onCartClick, onProfileClick }: Head
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <Button variant="ghost">Home</Button>
-            <Button variant="ghost">Products</Button>
-            <Button variant="ghost">Categories</Button>
-            <Button variant="ghost">Deals</Button>
-            <Button variant="ghost">About</Button>
+            <Button asChild variant="ghost">
+              <Link to="/">Home</Link>
+            </Button>
+            <Button asChild variant="ghost">
+              <Link to="/view-all">Products</Link>
+            </Button>
+            <Button asChild variant="ghost">
+              <Link to="/categories">Categories</Link>
+            </Button>
+            <Button asChild variant="ghost">
+              <Link to="/deals">Deals</Link>
+            </Button>
+            <Button asChild variant="ghost">
+              <Link to="/about">About</Link>
+            </Button>
           </nav>
 
           {/* Search */}
@@ -52,10 +69,10 @@ export function Header({ cartItemsCount = 0, onCartClick, onProfileClick }: Head
             <Button variant="ghost" size="icon" className="hidden md:flex">
               <Heart className="h-5 w-5" />
             </Button>
-            
-            <Button 
-              variant="ghost" 
-              size="icon" 
+
+            <Button
+              variant="ghost"
+              size="icon"
               className="relative"
               onClick={onCartClick}
             >
@@ -66,7 +83,7 @@ export function Header({ cartItemsCount = 0, onCartClick, onProfileClick }: Head
                 </Badge>
               )}
             </Button>
-            
+
             <Button variant="ghost" size="icon" onClick={onProfileClick}>
               <User className="h-5 w-5" />
             </Button>
